@@ -10,7 +10,11 @@
   (:nicknames #:checkpoint-sync #:cpsync)
   (:use #:cl)
   (:export
-   #:with-checkpoint-sync-timing
+   #:identity-list
+   #:flatten
+   #:map-keys
+   #:now-timestamp
+#:with-checkpoint-sync-timing
    #:checkpoint-sync-batch-process
    #:checkpoint-sync-health-check;; ========== TYPES ==========
    ;; Core checkpoint types
