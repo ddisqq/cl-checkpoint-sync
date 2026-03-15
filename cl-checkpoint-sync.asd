@@ -7,10 +7,10 @@
 ;;;; Pure Common Lisp implementation with no external dependencies.
 
 (asdf:defsystem #:cl-checkpoint-sync
-  :name "CL-CHECKPOINT-SYNC"
+  :name "cl-checkpoint-sync"
   :description "Checkpoint-based fast sync for blockchain state synchronization"
   :version "0.1.0"
-  :author "Parkian Company LLC"
+  :author "Park Ian Co"
   :license "Apache-2.0"
   :homepage "https://github.com/parkianco/cl-checkpoint-sync"
   :bug-tracker "https://github.com/parkianco/cl-checkpoint-sync/issues"
@@ -39,7 +39,7 @@
   :in-order-to ((asdf:test-op (asdf:test-op #:cl-checkpoint-sync/test))))
 
 (asdf:defsystem #:cl-checkpoint-sync/test
-  :name "CL-CHECKPOINT-SYNC Tests"
+  :name "cl-checkpoint-sync"
   :description "Test suite for cl-checkpoint-sync"
   :depends-on (#:cl-checkpoint-sync)
   :serial t
