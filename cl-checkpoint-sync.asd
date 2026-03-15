@@ -22,19 +22,10 @@
   :components
   ((:file "package")
    (:module "src"
-    :serial t
-    :components
-    ((:file "util")           ; Utilities (hex encoding, merkle, copy-hash)
-     (:file "crypto")         ; SHA256, signature verification stubs
-     (:file "types")          ; Core type definitions
-     (:file "source")         ; Source discovery and validation
-     (:file "download")       ; Checkpoint download with resume
-     (:file "verification")   ; Proof and signature verification
-     (:file "finality")       ; PoW/PoS/Hybrid finality providers
-     (:file "weak-subjectivity")  ; WS period calculation and validation
-     (:file "state")          ; State reconstruction
-     (:file "bootstrap")      ; Bootstrap and sync management
-     )))
+                :components ((:file "package")
+                             (:file "conditions" :depends-on ("package"))
+                             (:file "types" :depends-on ("package"))
+                             (:file "cl-checkpoint-sync" :depends-on ("package" "conditions" "types")))))
 
   :in-order-to ((asdf:test-op (asdf:test-op #:cl-checkpoint-sync/test))))
 
